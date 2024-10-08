@@ -1,0 +1,11 @@
+# Need to pass the values for both variables 'component' and 'target_environment' to this playbook
+# these values are passed from terraform to shell script and then to ansible playbook
+# environment is a reserved word, so using target_environment
+
+- name: "configure {{component}} server"
+  hosts: all
+  become: yes
+  var_files:
+  - "variables-{{target_environment}}.yaml"
+  roles:
+  - "{{component}}"
