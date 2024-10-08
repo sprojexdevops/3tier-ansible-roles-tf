@@ -2,10 +2,10 @@
 # these values are passed from terraform to shell script and then to ansible playbook
 # environment is a reserved word, so using target_environment
 
-- name: "configure {{component}} server"
+- name: "configure {{ component }} server"
   hosts: all
   become: yes
   var_files:
-  - "variables-{{target_environment}}.yaml"
+  - "variables-{{ target_environment }}.yaml"
   roles:
-  - "{{component}}"
+  - "{{ component }}"
