@@ -15,7 +15,6 @@
 - name: create user if does not exist
   ansible.builtin.user:
     name: expense
-    state: present
 
 - name: import taks from common role
   ansible.builtin.import_role:
