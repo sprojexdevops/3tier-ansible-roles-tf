@@ -1,5 +1,3 @@
-backend_host: backend.sprojex.in
-backend2_host: backend2.sprojex.in
+backend_host: backend.app-dev.sprojex.in
 app_location: /usr/share/nginx/html
 component: frontend
-upstream: backend
