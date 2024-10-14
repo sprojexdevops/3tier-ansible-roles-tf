@@ -9,7 +9,7 @@
     tasks_from: app-pre-req
 
 - name: Copy frontend.conf
-  ansible.builtin.copy:
+  ansible.builtin.template:
     src: frontend.conf.j2
     dest: /etc/nginx/default.d/frontend.conf
   notify:
